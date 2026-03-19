@@ -52,6 +52,10 @@ struct ContentView: View {
                                     .foregroundStyle(page.color)
                             }
                             .buttonStyle(.plain)
+                            
+                            // editable reminder text with changed opacity
+                            TextField(reminder.title, text: $reminder.title)
+                                .opacity(0.5)
                         } else {
                             Button {
                                 reminder.isCompleted = true
@@ -60,10 +64,10 @@ struct ContentView: View {
                                     .foregroundStyle(page.color)
                             }
                             .buttonStyle(.plain)
+                            
+                            // editable reminder text
+                            TextField(reminder.title, text: $reminder.title)
                         }
-                        
-                        // editable reminder text
-                        TextField(reminder.title, text: $reminder.title)
                     }
                 }
                 .onDelete { indexSet in
