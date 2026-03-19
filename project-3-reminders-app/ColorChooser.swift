@@ -34,7 +34,3 @@ struct ColorChooser: View {
         .background(Color.secondary.opacity(0.15), in: RoundedRectangle(cornerRadius: 16))
     }
 }
-
-#Preview {
-    ColorChooser()
-}
